@@ -66,6 +66,7 @@
         volumes:
           - /var/run/docker.sock:/var/run/docker.sock
           - "{{ squirrel_data_directory }}/playbooks:/playbooks:rw"
+          - "{{ squirrel_data_directory }}/config:/ansible-config:rw"
         networks:
           - name: "{{ squirrel_network_name }}"
         network_mode: "{{ squirrel_network_name }}"
